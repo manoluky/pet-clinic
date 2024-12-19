@@ -1,4 +1,4 @@
-name: SonarCloud Workflow
+name: SonarCloud Workflow Manuel C
 
 on:
   push:
