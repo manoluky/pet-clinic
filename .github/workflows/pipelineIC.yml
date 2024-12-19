@@ -3,7 +3,7 @@ name: SonarCloud Workflow Manuel Ca
 on:
   push:
     branches:
-      - main
+      - feature
       - '**'
 
 jobs:
@@ -164,4 +164,3 @@ jobs:
         name: Depcheck Report
         path: ./reports
 
-        
