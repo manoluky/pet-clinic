@@ -68,7 +68,7 @@ jobs:
             echo "Estableciendo la rama main como predeterminada..."
             curl -s -f -X POST -u "$SONAR_TOKEN:" \
               "https://sonarcloud.io/api/project_branches/rename" \
-              -d "name=main" \
+              -d "name=feature" \
               -d "project=$REPO_NAME"
 
             echo "project_created=true" >> $GITHUB_ENV
