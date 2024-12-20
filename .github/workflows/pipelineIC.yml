@@ -58,7 +58,7 @@ jobs:
               "https://sonarcloud.io/api/projects/create" \
               -d "name=$REPO_NAME" \
               -d "project=$REPO_NAME" \
-              -d "organization=ayudantiausach" \
+              -d "organization=tareausach" \
               -d "visibility=public")
 
             if [ "$create_response" -ne 201 ]; then
@@ -90,10 +90,10 @@ jobs:
           echo "Realizando análisis inicial en la rama main..."
           ./gradlew sonarqube \
             -Dsonar.projectKey=$REPO_NAME \
-            -Dsonar.organization=ayudantiausach \
+            -Dsonar.organization=tareausach \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.token=$SONAR_TOKEN \
-            -Dsonar.branch.name=feature
+            -Dsonar.branch.name=main
 
       - name: Perform Branch Analysis
         if: env.project_created == 'false'
@@ -105,7 +105,7 @@ jobs:
           echo "Realizando análisis en la rama actual: $BRANCH_NAME..."
           ./gradlew sonarqube \
             -Dsonar.projectKey=$REPO_NAME \
-            -Dsonar.organization=ayudantiausach \
+            -Dsonar.organization=tareausach \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.token=$SONAR_TOKEN \
             -Dsonar.branch.name=$BRANCH_NAME
