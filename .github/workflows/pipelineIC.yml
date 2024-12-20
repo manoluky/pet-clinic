@@ -90,7 +90,7 @@ jobs:
           echo "Realizando análisis inicial en la rama main..."
           ./gradlew sonarqube \
             -Dsonar.projectKey=$REPO_NAME \
-            -Dsonar.organization=manoluky \
+            -Dsonar.organization=ayudantiausach \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.token=$SONAR_TOKEN \
             -Dsonar.branch.name=feature
@@ -105,7 +105,7 @@ jobs:
           echo "Realizando análisis en la rama actual: $BRANCH_NAME..."
           ./gradlew sonarqube \
             -Dsonar.projectKey=$REPO_NAME \
-            -Dsonar.organization=manoluky \
+            -Dsonar.organization=ayudantiausach \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.token=$SONAR_TOKEN \
             -Dsonar.branch.name=$BRANCH_NAME
