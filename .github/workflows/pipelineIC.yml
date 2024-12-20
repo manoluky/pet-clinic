@@ -3,7 +3,7 @@ name: SonarCloud Workflow Manuel Ca
 on:
   push:
     branches:
-      - main
+      - feature
       - '**'
 
 jobs:
